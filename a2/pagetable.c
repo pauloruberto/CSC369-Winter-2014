@@ -60,10 +60,6 @@ int allocate_frame(pgtbl_entry_t *p) {
 			perror("invalid swap");
 			exit(1);
 		}
-
-
-
-
 	}
 
 	// Record information for virtual page that will now be stored in frame

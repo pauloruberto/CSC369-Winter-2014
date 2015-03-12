@@ -52,12 +52,14 @@ int allocate_frame(pgtbl_entry_t *p) {
 		// need to swap out frame
 		// coremap[frame] gives you a pgtbl_entry_t that stores the frame
 		// this struct is a pointer so point through it to get swap_off
-		swap_pageout((unsigned) frame, pte->swap_off);
-
+		int offset = swap_pageout((unsigned) frame, pte->swap_off);
+		// need to set the frame's new offset
+		pte->swap_off = offset;
 		// now need to update PTE to show that virtual page is removed from memory
 		pte->frame &= ~(1 << PG_VALID);
 		// also show that it has been swapped out
 		pte->frame &= ~(1 << PG_ONSWAP)
+
 	}
 
 	// Record information for virtual page that will now be stored in frame
@@ -155,8 +157,10 @@ char *find_physpage(addr_t vaddr, char type) {
 	// Use top-level page directory to get pointer to 2nd-level page table
 	//(void)idx; // To keep compiler happy - remove when you have a real use.
 	pgdir_entry_t dir_entry = pgdir[idx];
+	if (dir_entry == 0)
 
 	// Use vaddr to get index into 2nd-level page table and initialize 'p'
+	
 	idx = PGTBL_INDEX(vaddr);
 	*p = dir_entry[idx];
 

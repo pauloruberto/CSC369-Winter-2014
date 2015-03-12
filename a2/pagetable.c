@@ -52,14 +52,12 @@ int allocate_frame(pgtbl_entry_t *p) {
 		// need to swap out frame
 		// first need to update PTE to show that virtual page is removed from memory
 		pte->frame & PG_VALID = 0
-		
+		// update PTE to show its on swap
+		pte->frame & PG_ONSWAP = 1
+
 		// coremap[frame] gives you a pgtbl_entry_t that stores the frame
 		// this struct is a pointer so point through it to get swap_off
-		int rv = swap_pageout((unsigned) frame, pte->swap_off);
-		if (rv == INVALID_SWAP) {
-			perror("invalid swap");
-			exit(1);
-		}
+		swap_pageout((unsigned) frame, pte->swap_off);
 	}
 
 	// Record information for virtual page that will now be stored in frame

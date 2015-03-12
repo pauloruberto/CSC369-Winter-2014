@@ -39,6 +39,29 @@ int allocate_frame(pgtbl_entry_t *p) {
 		// All frames were in use, so victim frame must hold some page
 		// Write victim page to swap, if needed, and update pagetable
 		// IMPLEMENTATION NEEDED
+		
+		//TODO optimize this function by only swapping out dirty pages
+
+		// first increment relevant counters
+		pgtbl_entry_t *pte = coremap[frame].pte;
+		if (ptbe->frame & PG_DIRTY)
+			evict_dirty_count++;
+		else
+			evict_clean_count++;
+
+		// need to swap out frame
+		// first need to update PTE to show that virtual page is removed from memory
+		pte->frame & PG_VALID = 0
+		
+		// coremap[frame] gives you a pgtbl_entry_t that stores the frame
+		// this struct is a pointer so point through it to get swap_off
+		int rv = swap_pageout((unsigned) frame, pte->swap_off);
+		if (rv == INVALID_SWAP) {
+			perror("invalid swap");
+			exit(1);
+		}
+
+
 
 
 	}

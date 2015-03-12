@@ -27,7 +27,7 @@ int fifo_evict() {
 	//front of the queue since allocate_frame() replaces the page
 	//e.g. queue: 1,2,3.  remove 1 -> 4,2,3  remove 2 -> 4,5,3  remove 3 ->4,5,6
 	//always want to remove the "minimum of the queue"
-	if (start == memsize + 1) { //if past end of queue
+	if (start == memsize) { //if past end of queue (recall queue starts at 0)
 		start = 0; //note that memsize is constant
 	}
 

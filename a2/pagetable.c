@@ -4,6 +4,7 @@
 #include "pagetable.h"
 
 // The top-level page table (also known as the 'page directory')
+// Needs to be external for opt.c
 pgdir_entry_t pgdir[PTRS_PER_PGDIR]; 
 
 // Counters for various events.
@@ -168,7 +169,7 @@ char *find_physpage(addr_t vaddr, char type) {
 	p = &page_tables[idx];
 
 	// Check if p is valid or not, on swap or not, and handle appropriately
-	if ((p->frame & PG_VALID) == 0) { //page is not in memory,
+	if ((p->frame & PG_VALID) == 0) { //page is not in memory
 		// page needs to be allocated or fetched from swap
 		miss_count++; //missed
 		p->frame |= PG_VALID; //eventually has to become valid

@@ -30,6 +30,7 @@
 // page size is still 4096 (12 bits).
 // We split the remaining 20 bits evenly into top-level (page directory) index
 // and second level (page table) index, using 10 bits for each.
+
 #define PGDIR_SHIFT       22     // Leaves just top 10 bits of vaddr 
 #define PTRS_PER_PGDIR  1024
 #define PTRS_PER_PGTBL  1024
@@ -54,7 +55,9 @@ typedef struct {
 typedef struct { 
 	unsigned int frame; // if valid bit == 1, physical frame holding vpage
 	off_t swap_off;       // offset in swap file of vpage, if any
-	unsigned long timestamp; //used for LRU so far
+	////////////////////////////////////////////////////////////////////////////////////////////
+	unsigned long timestamp; // used for LRU as a timestap
+	////////////////////////////////////////////////////////////////////////////////////////////
 } pgtbl_entry_t;    
 
 extern void init_pagetable();
@@ -73,6 +76,9 @@ struct frame {
  * in the page table entry (pgtbl_entry_t).
  */
 extern struct frame *coremap;
+
+// NEEDS TO BE EXTERN FOR opt.c
+//extern pgdir_entry_t *pgdir;
 
 
 // Swap functions for use in other files

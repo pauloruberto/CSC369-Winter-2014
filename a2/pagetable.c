@@ -53,7 +53,7 @@ int allocate_frame(pgtbl_entry_t *p) {
 
 		// need to swap out page
 		// pte struct is a pointer so point through it to get swap_off
-		int offset = swap_pageout((unsigned) frame, pte->swap_off);
+		int offset = swap_pageout(frame, pte->swap_off);
 		// need to set the page's new offset
 		pte->swap_off = offset;
 		// now need to update PTE to show that virtual page is removed from memory

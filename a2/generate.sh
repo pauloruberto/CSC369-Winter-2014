@@ -150,13 +150,13 @@ echo "!!!!!!!!!Memory size: 150!!!!!!!!!"
 echo "!!!!!!!!!Memory size: 200!!!!!!!!!"
 ./sim -f traceprogs/tr-blocked.ref -m 200 -s 3000 -a clock | tail -n 7
 echo
-echo "*********fib*********"
+echo "*********my_trace_generator*********"
 echo "!!!!!!!!!Memory size: 50!!!!!!!!!"
-./sim -f traceprogs/tr-fib.ref -m 50 -s 3000 -a clock | tail -n 7
+./sim -f traceprogs/tr-my_trace_generator.ref -m 50 -s 3000 -a clock | tail -n 7
 echo "!!!!!!!!!Memory size: 100!!!!!!!!!"
-./sim -f traceprogs/tr-fib.ref -m 100 -s 3000 -a clock | tail -n 7
+./sim -f traceprogs/tr-my_trace_generator.ref -m 100 -s 3000 -a clock | tail -n 7
 echo "!!!!!!!!!Memory size: 150!!!!!!!!!"
-./sim -f traceprogs/tr-fib.ref -m 150 -s 3000 -a clock | tail -n 7
+./sim -f traceprogs/tr-my_trace_generator.ref -m 150 -s 3000 -a clock | tail -n 7
 echo "!!!!!!!!!Memory size: 200!!!!!!!!!"
-./sim -f traceprogs/tr-fib.ref -m 200 -s 3000 -a clock | tail -n 7
+./sim -f traceprogs/tr-my_trace_generator.ref -m 200 -s 3000 -a clock | tail -n 7
 echo "----------------------------------------------"

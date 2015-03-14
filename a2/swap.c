@@ -199,14 +199,14 @@ int swap_pagein(unsigned frame, int swap_offset) {
 	pos = lseek(swapfd, swap_offset, SEEK_SET);
 	if (pos != swap_offset) {
 		assert(pos == (off_t)-1);
-		perror("swap_pagein: failed to set read position");
+		//perror("swap_pagein: failed to set read position");
 		return -errno;
 	}
 
 	// Read page data from swapfile into memory
 	bytes_read = read(swapfd, frame_ptr, SIMPAGESIZE);
 	if (bytes_read != SIMPAGESIZE) {
-		fprintf(stderr,"swap_pagein: did not read whole page\n");
+		//fprintf(stderr,"swap_pagein: did not read whole page\n");
 		return bytes_read;
 	}
 	return 0;

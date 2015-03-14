@@ -1,0 +1,682 @@
+-------------- Results for rand --------------
+*********simpleloop*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 7583
+Miss count: 2977
+Clean evictions: 235
+Dirty evictions: 2692
+Total references : 10560
+Hit rate: 71.8087
+Miss rate: 28.1913
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 7805
+Miss count: 2755
+Clean evictions: 51
+Dirty evictions: 2604
+Total references : 10560
+Hit rate: 73.9110
+Miss rate: 26.0890
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 7843
+Miss count: 2717
+Clean evictions: 22
+Dirty evictions: 2545
+Total references : 10560
+Hit rate: 74.2708
+Miss rate: 25.7292
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 7854
+Miss count: 2706
+Clean evictions: 18
+Dirty evictions: 2488
+Total references : 10560
+Hit rate: 74.3750
+Miss rate: 25.6250
+
+*********matmul*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 1972586
+Miss count: 995558
+Clean evictions: 956334
+Dirty evictions: 39174
+Total references : 2968144
+Hit rate: 66.4586
+Miss rate: 33.5414
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 2643917
+Miss count: 324227
+Clean evictions: 316545
+Dirty evictions: 7582
+Total references : 2968144
+Hit rate: 89.0764
+Miss rate: 10.9236
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 2871866
+Miss count: 96278
+Clean evictions: 93792
+Dirty evictions: 2336
+Total references : 2968144
+Hit rate: 96.7563
+Miss rate: 3.2437
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 2911656
+Miss count: 56488
+Clean evictions: 54639
+Dirty evictions: 1649
+Total references : 2968144
+Hit rate: 98.0969
+Miss rate: 1.9031
+
+*********blocked*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 2516614
+Miss count: 8402
+Clean evictions: 5832
+Dirty evictions: 2520
+Total references : 2525016
+Hit rate: 99.6672
+Miss rate: 0.3328
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 2519783
+Miss count: 5233
+Clean evictions: 3423
+Dirty evictions: 1710
+Total references : 2525016
+Hit rate: 99.7928
+Miss rate: 0.2072
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 2520592
+Miss count: 4424
+Clean evictions: 2800
+Dirty evictions: 1474
+Total references : 2525016
+Hit rate: 99.8248
+Miss rate: 0.1752
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 2521155
+Miss count: 3861
+Clean evictions: 2342
+Dirty evictions: 1319
+Total references : 2525016
+Hit rate: 99.8471
+Miss rate: 0.1529
+
+*********my_trace_generator*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 16087
+Miss count: 313
+Clean evictions: 126
+Dirty evictions: 137
+Total references : 16400
+Hit rate: 98.0915
+Miss rate: 1.9085
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 16256
+Miss count: 144
+Clean evictions: 3
+Dirty evictions: 41
+Total references : 16400
+Hit rate: 99.1220
+Miss rate: 0.8780
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 16274
+Miss count: 126
+Clean evictions: 0
+Dirty evictions: 0
+Total references : 16400
+Hit rate: 99.2317
+Miss rate: 0.7683
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 16274
+Miss count: 126
+Clean evictions: 0
+Dirty evictions: 0
+Total references : 16400
+Hit rate: 99.2317
+Miss rate: 0.7683
+-------------- Results for FIFO --------------
+*********simpleloop*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 7591
+Miss count: 2969
+Clean evictions: 206
+Dirty evictions: 2713
+Total references : 10560
+Hit rate: 71.8845
+Miss rate: 28.1155
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 7806
+Miss count: 2754
+Clean evictions: 44
+Dirty evictions: 2610
+Total references : 10560
+Hit rate: 73.9205
+Miss rate: 26.0795
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 7846
+Miss count: 2714
+Clean evictions: 16
+Dirty evictions: 2548
+Total references : 10560
+Hit rate: 74.2992
+Miss rate: 25.7008
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 7854
+Miss count: 2706
+Clean evictions: 12
+Dirty evictions: 2494
+Total references : 10560
+Hit rate: 74.3750
+Miss rate: 25.6250
+
+*********matmul*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 1840871
+Miss count: 1127273
+Clean evictions: 1083235
+Dirty evictions: 43988
+Total references : 2968144
+Hit rate: 62.0209
+Miss rate: 37.9791
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 1884597
+Miss count: 1083547
+Clean evictions: 1061226
+Dirty evictions: 22221
+Total references : 2968144
+Hit rate: 63.4941
+Miss rate: 36.5059
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 2933734
+Miss count: 34410
+Clean evictions: 32946
+Dirty evictions: 1314
+Total references : 2968144
+Hit rate: 98.8407
+Miss rate: 1.1593
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 2934256
+Miss count: 33888
+Clean evictions: 32435
+Dirty evictions: 1253
+Total references : 2968144
+Hit rate: 98.8583
+Miss rate: 1.1417
+
+*********blocked*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 2518547
+Miss count: 6469
+Clean evictions: 4164
+Dirty evictions: 2255
+Total references : 2525016
+Hit rate: 99.7438
+Miss rate: 0.2562
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 2520658
+Miss count: 4358
+Clean evictions: 2777
+Dirty evictions: 1481
+Total references : 2525016
+Hit rate: 99.8274
+Miss rate: 0.1726
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 2520753
+Miss count: 4263
+Clean evictions: 2687
+Dirty evictions: 1426
+Total references : 2525016
+Hit rate: 99.8312
+Miss rate: 0.1688
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 2521824
+Miss count: 3192
+Clean evictions: 1893
+Dirty evictions: 1099
+Total references : 2525016
+Hit rate: 99.8736
+Miss rate: 0.1264
+
+*********my_trace_generator*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 16119
+Miss count: 281
+Clean evictions: 87
+Dirty evictions: 144
+Total references : 16400
+Hit rate: 98.2866
+Miss rate: 1.7134
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 16254
+Miss count: 146
+Clean evictions: 0
+Dirty evictions: 46
+Total references : 16400
+Hit rate: 99.1098
+Miss rate: 0.8902
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 16274
+Miss count: 126
+Clean evictions: 0
+Dirty evictions: 0
+Total references : 16400
+Hit rate: 99.2317
+Miss rate: 0.7683
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 16274
+Miss count: 126
+Clean evictions: 0
+Dirty evictions: 0
+Total references : 16400
+Hit rate: 99.2317
+Miss rate: 0.7683
+-------------- Results for LRU --------------
+*********simpleloop*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 7775
+Miss count: 2785
+Clean evictions: 94
+Dirty evictions: 2641
+Total references : 10560
+Hit rate: 73.6269
+Miss rate: 26.3731
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 7877
+Miss count: 2683
+Clean evictions: 1
+Dirty evictions: 2582
+Total references : 10560
+Hit rate: 74.5928
+Miss rate: 25.4072
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 7880
+Miss count: 2680
+Clean evictions: 0
+Dirty evictions: 2530
+Total references : 10560
+Hit rate: 74.6212
+Miss rate: 25.3788
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 7880
+Miss count: 2680
+Clean evictions: 0
+Dirty evictions: 2480
+Total references : 10560
+Hit rate: 74.6212
+Miss rate: 25.3788
+
+*********matmul*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 1926916
+Miss count: 1041228
+Clean evictions: 1040073
+Dirty evictions: 1105
+Total references : 2968144
+Hit rate: 64.9199
+Miss rate: 35.0801
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 1961692
+Miss count: 1006452
+Clean evictions: 1005272
+Dirty evictions: 1080
+Total references : 2968144
+Hit rate: 66.0915
+Miss rate: 33.9085
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 2935260
+Miss count: 32884
+Clean evictions: 31656
+Dirty evictions: 1078
+Total references : 2968144
+Hit rate: 98.8921
+Miss rate: 1.1079
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 2935272
+Miss count: 32872
+Clean evictions: 31594
+Dirty evictions: 1078
+Total references : 2968144
+Hit rate: 98.8925
+Miss rate: 1.1075
+
+*********blocked*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 2519783
+Miss count: 5233
+Clean evictions: 2802
+Dirty evictions: 2381
+Total references : 2525016
+Hit rate: 99.7928
+Miss rate: 0.2072
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 2521184
+Miss count: 3832
+Clean evictions: 2648
+Dirty evictions: 1084
+Total references : 2525016
+Hit rate: 99.8482
+Miss rate: 0.1518
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 2521192
+Miss count: 3824
+Clean evictions: 2612
+Dirty evictions: 1062
+Total references : 2525016
+Hit rate: 99.8486
+Miss rate: 0.1514
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 2521316
+Miss count: 3700
+Clean evictions: 2438
+Dirty evictions: 1062
+Total references : 2525016
+Hit rate: 99.8535
+Miss rate: 0.1465
+
+*********my_trace_generator*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 16197
+Miss count: 203
+Clean evictions: 46
+Dirty evictions: 107
+Total references : 16400
+Hit rate: 98.7622
+Miss rate: 1.2378
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 16272
+Miss count: 128
+Clean evictions: 0
+Dirty evictions: 28
+Total references : 16400
+Hit rate: 99.2195
+Miss rate: 0.7805
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 16274
+Miss count: 126
+Clean evictions: 0
+Dirty evictions: 0
+Total references : 16400
+Hit rate: 99.2317
+Miss rate: 0.7683
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 16274
+Miss count: 126
+Clean evictions: 0
+Dirty evictions: 0
+Total references : 16400
+Hit rate: 99.2317
+Miss rate: 0.7683
+-------------- Results for clock --------------
+*********simpleloop*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 7761
+Miss count: 2799
+Clean evictions: 109
+Dirty evictions: 2640
+Total references : 10560
+Hit rate: 73.4943
+Miss rate: 26.5057
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 7876
+Miss count: 2684
+Clean evictions: 2
+Dirty evictions: 2582
+Total references : 10560
+Hit rate: 74.5833
+Miss rate: 25.4167
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 7879
+Miss count: 2681
+Clean evictions: 0
+Dirty evictions: 2531
+Total references : 10560
+Hit rate: 74.6117
+Miss rate: 25.3883
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 7879
+Miss count: 2681
+Clean evictions: 0
+Dirty evictions: 2481
+Total references : 10560
+Hit rate: 74.6117
+Miss rate: 25.3883
+
+*********matmul*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 1926905
+Miss count: 1041239
+Clean evictions: 1040084
+Dirty evictions: 1105
+Total references : 2968144
+Hit rate: 64.9195
+Miss rate: 35.0805
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 1966416
+Miss count: 1001728
+Clean evictions: 1000549
+Dirty evictions: 1079
+Total references : 2968144
+Hit rate: 66.2507
+Miss rate: 33.7493
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 2933568
+Miss count: 34576
+Clean evictions: 33348
+Dirty evictions: 1078
+Total references : 2968144
+Hit rate: 98.8351
+Miss rate: 1.1649
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 2935260
+Miss count: 32884
+Clean evictions: 31607
+Dirty evictions: 1077
+Total references : 2968144
+Hit rate: 98.8921
+Miss rate: 1.1079
+
+*********blocked*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 2519280
+Miss count: 5736
+Clean evictions: 3268
+Dirty evictions: 2418
+Total references : 2525016
+Hit rate: 99.7728
+Miss rate: 0.2272
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 2520657
+Miss count: 4359
+Clean evictions: 2653
+Dirty evictions: 1606
+Total references : 2525016
+Hit rate: 99.8274
+Miss rate: 0.1726
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 2521192
+Miss count: 3824
+Clean evictions: 2613
+Dirty evictions: 1061
+Total references : 2525016
+Hit rate: 99.8486
+Miss rate: 0.1514
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 2521777
+Miss count: 3239
+Clean evictions: 1977
+Dirty evictions: 1062
+Total references : 2525016
+Hit rate: 99.8717
+Miss rate: 0.1283
+
+*********my_trace_generator*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 16196
+Miss count: 204
+Clean evictions: 45
+Dirty evictions: 109
+Total references : 16400
+Hit rate: 98.7561
+Miss rate: 1.2439
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 16268
+Miss count: 132
+Clean evictions: 0
+Dirty evictions: 32
+Total references : 16400
+Hit rate: 99.1951
+Miss rate: 0.8049
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 16274
+Miss count: 126
+Clean evictions: 0
+Dirty evictions: 0
+Total references : 16400
+Hit rate: 99.2317
+Miss rate: 0.7683
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 16274
+Miss count: 126
+Clean evictions: 0
+Dirty evictions: 0
+Total references : 16400
+Hit rate: 99.2317
+Miss rate: 0.7683
+----------------------------------------------
+-------------- Results for opt --------------
+*********simpleloop*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 6275
+Miss count: 4285
+Clean evictions: 1607
+Dirty evictions: 2628
+Total references : 10560
+Hit rate: 59.4223
+Miss rate: 40.5777
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 7777
+Miss count: 2783
+Clean evictions: 142
+Dirty evictions: 2541
+Total references : 10560
+Hit rate: 73.6458
+Miss rate: 26.3542
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 7922
+Miss count: 2638
+Clean evictions: 0
+Dirty evictions: 2488
+Total references : 10560
+Hit rate: 75.0189
+Miss rate: 24.9811
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 7922
+Miss count: 2638
+Clean evictions: 0
+Dirty evictions: 2438
+Total references : 10560
+Hit rate: 75.0189
+Miss rate: 24.9811
+
+*********matmul*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 745933
+Miss count: 2222211
+Clean evictions: 1831727
+Dirty evictions: 390434
+Total references : 2968144
+Hit rate: 25.1313
+Miss rate: 74.8687
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 1137560
+Miss count: 1830584
+Clean evictions: 1440150
+Dirty evictions: 390334
+Total references : 2968144
+Hit rate: 38.3256
+Miss rate: 61.6744
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 1267688
+Miss count: 1700456
+Clean evictions: 1341429
+Dirty evictions: 358877
+Total references : 2968144
+Hit rate: 42.7098
+Miss rate: 57.2902
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 1382829
+Miss count: 1585315
+Clean evictions: 1232636
+Dirty evictions: 352479
+Total references : 2968144
+Hit rate: 46.5890
+Miss rate: 53.4110
+
+*********blocked*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 635098
+Miss count: 1889918
+Clean evictions: 1555278
+Dirty evictions: 334590
+Total references : 2525016
+Hit rate: 25.1522
+Miss rate: 74.8478
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 971302
+Miss count: 1553714
+Clean evictions: 1219126
+Dirty evictions: 334488
+Total references : 2525016
+Hit rate: 38.4672
+Miss rate: 61.5328
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 1147126
+Miss count: 1377890
+Clean evictions: 1084910
+Dirty evictions: 292830
+Total references : 2525016
+Hit rate: 45.4304
+Miss rate: 54.5696
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 1242982
+Miss count: 1282034
+Clean evictions: 996942
+Dirty evictions: 284892
+Total references : 2525016
+Hit rate: 49.2267
+Miss rate: 50.7733
+
+*********my_trace_generator*********
+!!!!!!!!!Memory size: 50!!!!!!!!!
+Hit count: 10183
+Miss count: 6217
+Clean evictions: 5988
+Dirty evictions: 179
+Total references : 16400
+Hit rate: 62.0915
+Miss rate: 37.9085
+!!!!!!!!!Memory size: 100!!!!!!!!!
+Hit count: 12620
+Miss count: 3780
+Clean evictions: 3577
+Dirty evictions: 103
+Total references : 16400
+Hit rate: 76.9512
+Miss rate: 23.0488
+!!!!!!!!!Memory size: 150!!!!!!!!!
+Hit count: 16274
+Miss count: 126
+Clean evictions: 0
+Dirty evictions: 0
+Total references : 16400
+Hit rate: 99.2317
+Miss rate: 0.7683
+!!!!!!!!!Memory size: 200!!!!!!!!!
+Hit count: 16274
+Miss count: 126
+Clean evictions: 0
+Dirty evictions: 0
+Total references : 16400
+Hit rate: 99.2317
+Miss rate: 0.7683
+----------------------------------------------

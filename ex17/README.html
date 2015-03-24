@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Exercise 17- Ext2 file system structure</title>
+    
+    <meta name="author" content="Karen Reid">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+  <link href="http://www.cdf.toronto.edu/~csc369h/winter/assets/themes/bootstrap/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://www.cdf.toronto.edu/~csc369h/winter//assets/css/mystyle.css" rel="stylesheet">
+-->
+  <link href="http://www.cdf.toronto.edu/~csc369h/winter//assets/css/stripped.css" rel="stylesheet">
+  
+    <!--[if lt IE 9]>
+      <script src="http://www.cdf.toronto.edu/~csc369h/winter/assets/themes/bootstrap/resources/respond/Respond.min.js"></script>
+    <![endif]-->
+
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://www.cdf.toronto.edu/~csc369h/winter/index.html">CSC369H: Operating Systems</a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+          
+              
+                  
+              
+<!--               <li><a href="http://www.cdf.toronto.edu/~csc369h/winter/info.html" target="_blank">Syllabus</a></li>
+-->
+               <li><a href="http://www.cdf.toronto.edu/~csc369h/winter/info.html">Syllabus</a></li>
+           
+              
+                  
+              
+<!--               <li><a href="http://www.cdf.toronto.edu/~csc369h/winter/lectures.html" target="_blank">Lectures</a></li>
+-->
+               <li><a href="http://www.cdf.toronto.edu/~csc369h/winter/lectures.html">Lectures</a></li>
+           
+              
+                  
+              
+<!--               <li><a href="http://www.cdf.toronto.edu/~csc369h/winter/assignments.html" target="_blank">Assignments</a></li>
+-->
+               <li><a href="http://www.cdf.toronto.edu/~csc369h/winter/assignments.html">Assignments</a></li>
+           
+              
+                  
+              
+<!--               <li><a href="http://www.cdf.toronto.edu/~csc369h/winter/tests.html" target="_blank">Tests</a></li>
+-->
+               <li><a href="http://www.cdf.toronto.edu/~csc369h/winter/tests.html">Tests</a></li>
+           
+              
+                  
+              
+<!--               <li><a href="http://www.cdf.toronto.edu/~csc369h/winter/grades.html" target="_blank">Grades</a></li>
+-->
+               <li><a href="http://www.cdf.toronto.edu/~csc369h/winter/grades.html">Grades</a></li>
+           
+              
+                  
+              
+<!--               <li><a href="http://www.cdf.toronto.edu/~csc369h/winter/feedback.html" target="_blank">Anonymous Feedback</a></li>
+-->
+               <li><a href="http://www.cdf.toronto.edu/~csc369h/winter/feedback.html">Anonymous Feedback</a></li>
+           
+              
+                  
+              
+<!--               <li><a href="http://piazza.com/utoronto.ca/winter2015/csc369/home" target="_blank">Piazza</a></li>
+-->
+               <li><a href="http://piazza.com/utoronto.ca/winter2015/csc369/home">Piazza</a></li>
+           
+              
+                  
+              
+<!--               <li><a href="https://markus.cdf.toronto.edu/csc369-2015-01/" target="_blank">MarkUs</a></li>
+-->
+               <li><a href="https://markus.cdf.toronto.edu/csc369-2015-01/">MarkUs</a></li>
+           
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      
+<div class="page-header">
+  <h1>Exercise 17- Ext2 file system structure </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+      <p><b>Due</b>: Monday March 23, 10 p.m.</p>
+
+<h2>Introduction</h2>
+
+<p>For Assignment 3, you will be manipulating an Ext2 file system image. The next three exercises are intended to help you get started on the assignment by helping you understand the structure of the file system.</p>
+
+<p>You may work in pairs for this exercise. MarkUs will only create the appropriate directory in your repository when you log into MarkUs and either create your group, or declare that you will work alone.  The groups will get a new shared repository, and the students working solo may also get a new repository.  Please log into MarkUs well before the deadline to take these steps.  (If you create the directory in svn, then MarkUs won't know about it and we won't be able to see your work.)</p>
+
+<p>It is your responsibility to log into MarkUs <em>before</em> the exercise deadline to ensure that you know where to commit your work, and so that MarkUs can connect your work to the grading system.</p>
+
+<p>If you work with different partners, please make a note in a README file in A3 saying who you worked with on the exercises in case the code for some parts looks too similar.</p>
+
+<h2>Requirements</h2>
+
+<p>Please read the Assignment 3 handout.  It has links to some resources that you will need to read to fully understand the ext2 structure.</p>
+
+<p>You are given two files as starter code:</p>
+<ul>
+    <li><a href="./ext2.h">ext2.h</a></li>
+    <li><a href="./readimage.c">readimage.c</a></li>
+</ul>
+
+<p>There are also a bunch of disk images available to you:</p>
+<ul>
+	<li><a href="./images/emptydisk.img">emptydisk</a></li>
+	<li><a href="./images/onefile.img">onefile</a></li>
+	<li><a href="./images/deletedfile.img">deletedfile</a></li>
+	<li><a href="./images/onedirectory.img">onedirectory</a></li>
+	<li><a href="./images/hardlink.img">hardlink</a></li>
+	<li><a href="./images/deleteddirectory.img">deleteddirectory</a></li>
+    <li><a href="./images/twolevel.img">twolevel</a></li>
+    <li><a href="./images/largefile.img">largefile</a></li>
+</ul>
+
+<p>Note that <code>readimage</code> uses <code>mmap</code> to map the disk image file into memory.  The superblock is in the second block on the disk starting at byte 1024, so we can interpret these bytes as the super block struct.</p>
+
+<p>You should also look at these bytes of the one of the images, for example emptydisk.img by running <code>xxd emptydisk.img > emptydisk.txt</code>
+and using an editor to view the contents of the file. Try the following:</p>
+<ul>
+    <li>Figure out where each block starts.</li>
+    <li>See what the inode bit map and block bitmaps look like.</li>
+    <li>Find other non-empty blocks to see if you can see what might be in them.</li>
+</ul>
+
+<p>Your task for this exercise is simple.  Add to <code>readimage</code> to print out the following fields from the block group descriptor.  For <code>emptydisk.img</code> your output should look <em>exactly</em> like the following. In other words, we should be able to use <code>diff</code> to compare your output to this and see that it is identical.</p>
+<pre>
+Inodes: 32
+Blocks: 128
+Block group:
+    block bitmap: 3
+    inode bitmap: 4
+    inode table: 5
+    free blocks: 105
+    free inodes: 21
+    used_dirs: 2
+</pre>
+
+<h2>Submission</h2>
+
+<p>Ensure that you have a repository directory created by MarkUs for this exercise, then add and commit <code>readimage.c</code> and <code>ext2.h</code> to this directory.</p>
+
+  </div>
+</div>
+
+
+      <hr>
+      <footer>
+        <p>
+          &copy; 2015 Karen Reid
+          <span class="pull-right text-muted">
+            powered by
+            <a href="http://jekyllbootstrap3.tk" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll-Bootstrap-3</a>
+            and <a href="http://getbootstrap.com" target="_blank">Twitter Bootstrap 3.0.3</a>
+          </span>
+        </p>
+      </footer>
+    </div>
+
+    
+
+    <script src="http://www.cdf.toronto.edu/~csc369h/winter/assets/themes/bootstrap/resources/jquery/jquery.min.js"></script>
+    <script src="http://www.cdf.toronto.edu/~csc369h/winter/assets/themes/bootstrap/resources/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
